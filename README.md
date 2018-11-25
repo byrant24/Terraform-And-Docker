@@ -83,9 +83,14 @@ Qumu Project Assignemnt
    
             terraform apply
         
-        
    **Description:** The terraform module creates ECS cluster and deploy Containers on Amazon’s ECS using *Fargate*. 
    The architecture uses Load Balancer, Route53 to expose services. The ECS service is autoscaled by using AutoScaling for fault tolerancy. Creates VPC, public and private subnet, security groups, deploys postgres in RDS, deploys redis in elasticache. Creates Container template, task definitions, ECS service and cluster.   
+   
+   **Note**: AWS credentials must be configured.
+   
+            aws configure
+            EXPORT Access key ID = XXXXXXXXXXXXXX
+            EXPORT Secret access key = XXXXXXXXXXXX
    
    **Components:**
    - `variables.tf` conatians all the variables required in the module.
