@@ -96,4 +96,11 @@ Qumu Project Assignemnt
    - `route53_mapping.tf` creates an alias for loadbalancer using hosted zone 'anmolposts.com'. 
    
         
+Deploying to aws fargate using kubernetes with **virtual-kubelet**.
+
+Prerequisites: Having kubernetes cluster master setup with **kops** in order to create Kubernetes Clusters on AWS Using Kops.
+I have documeneted my setup of kops in `Kubernetes cluster on aws using kops.txt` 
             
+Next step after setting up kops is setting up virtual-kubelet, its recently released by AWS and provides a methodology of running kubernetes in fargate. It requires 'go' language support. Becuase of limited support 'virtual-kubelet' provides i am still hovering around to intergate it with the terraform stack. 
+
+ 
