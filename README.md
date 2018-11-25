@@ -47,6 +47,7 @@ Qumu Project Assignemnt
    - `OperatorEmail`: Default (itsrai.anmol@gmail.com)
    - `KeyName`: Your Regional key pair
    - `SSHLocation`: Your Ip (Default: 0.0.0.0/0)
+   - `DNSPrefix`: Prefix to attach to the hoted zone 'anmolposts.com'
               
    **Note**: Sentry hardware requirements minimum 2 CPU, 4GB RAM.
 
