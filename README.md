@@ -71,7 +71,7 @@ Qumu Project Assignemnt
   
   Find the terraform scripts in the terraform module.
   
-  **Note:** AWS **Fargate** is available only on **selected** regions, currently not avaiable in ap-south-1(Mumbai) region.
+  **Note:** AWS **Fargate** is available only on **selected** regions, currently **not** avaiable in ap-south-1(Mumbai) region.
     
    To initialize a working directory containing Terraform configuration files.
      
