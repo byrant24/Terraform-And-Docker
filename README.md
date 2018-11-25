@@ -112,19 +112,24 @@ Modifications under `variables.tf`.
         
 Deploying to aws fargate using kubernetes with **virtual-kubelet**.
 
-Prerequisites: Having kubernetes cluster master setup with **kops** in order to create Kubernetes Clusters on AWS Using Kops.
-I have documeneted my setup of Kubernetes cluster on aws using kops` 
+**Prerequisites:** Having kubernetes cluster master setup with **kops** in order to create Kubernetes Clusters on AWS Using Kops.
+I have documeneted my setup of Kubernetes cluster on aws using kops. 
 
 To create kube cluster using kops:
-     `kops create cluster --node-count=2 --node-size=t2.medium --zones=us-east-1a --name=${KOPS_CLUSTER_NAME}`
+
+     kops create cluster --node-count=2 --node-size=t2.medium --zones=us-east-1a --name=${KOPS_CLUSTER_NAME}
 
 To create the Kubernetes cluster on AWS 
-     `kops update cluster --name ${KOPS_CLUSTER_NAME} --yes`
+
+     kops update cluster --name ${KOPS_CLUSTER_NAME} --yes`
 
 To validate cluster is running or not
-     `kops validate cluster
+
+     kops validate cluster
             
 ![alt text](https://s3.ap-south-1.amazonaws.com/qumuhyd1/kube_cluster.PNG)
+
+
 Next step after setting up kops is setting up virtual-kubelet, its recently released by AWS and provides a methodology of running kubernetes in fargate. It requires 'go' language support. Becuase of limited support 'virtual-kubelet' provides i am still hovering around to intergate it with the terraform stack. 
 
  
