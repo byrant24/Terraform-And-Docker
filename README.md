@@ -26,15 +26,15 @@ Qumu Project Assignemnt
  
  ## Cloud Engineer - Operations Assignment
 
-   a. Deploy using Dokcer
+### Deploy using Dokcer
     
    CloudFormation script "cloud_formation_script.json" can be found under "Sentry_Docker_Stack" module.
     
-   Summary - The CloudFormation scripts provisions infastructure, deploy and runs sentry application.
+   **Summary** - The CloudFormation scripts provisions infastructure, deploy and runs sentry application.
     
-   Description - " The 'cloud_formation_script.json' to host sentry app. I am using my own hosted domain 'anmolposts.com' in Route53 to create a record set. The CloudFormation Template is AutoScalingMultiAZWithNotifications, creates a multi-az, load balanced and Auto Scaled sentry application running on ec2 instnace behind an application load balancer. The application is configured to span all Availability Zones in the region and is Auto-Scaled based on the CPU utilization of the web servers. Notifications will be sent to the operator email address on scaling events. The instances are load balanced with a simple health check against the default web page. Amazon Linux is chosen as the ami. Please proivde a public facing VPC and atleast two subnets(default) with internet access for application load balancer to function".
+   **Description** - " The 'cloud_formation_script.json' to host sentry app. I am using my own hosted domain 'anmolposts.com' in Route53 to create a record set. The CloudFormation Template is AutoScalingMultiAZWithNotifications, creates a multi-az, load balanced and Auto Scaled sentry application running on ec2 instnace behind an application load balancer. The application is configured to span all Availability Zones in the region and is Auto-Scaled based on the CPU utilization of the web servers. Notifications will be sent to the operator email address on scaling events. The instances are load balanced with a simple health check against the default web page. Amazon Linux is chosen as the ami. Please proivde a public facing VPC and atleast two subnets(default) with internet access for application load balancer to function".
 
-   Parameters:
+   **Parameters**:
    
              VPCId: Internet facing VPC
              Subnets: Two subnets
@@ -45,11 +45,10 @@ Qumu Project Assignemnt
               
    **Note**: Sentry hardware requirements minimum 2 CPU, 4GB RAM.
        On using t2.micro the instarnce freezes on running dokcer web upgrade because of resource constraints.
-
-   Recomended Instance type 
-        - t2.xlarge 4 CPUS, 16GB RAM
-   Minimum -
-        -  t2.medium 2 CPUS, 4GB RAM
+        - Recomended Instance type:
+            t2.xlarge 4 CPUS, 16GB RAM
+        - Minimum -
+            t2.medium 2 CPUS, 4GB RAM
         
    AWS Architecture Diagram: https://s3.ap-south-1.amazonaws.com/qumuhyd1/CloudFormation_Docker_Architecture.png
    
