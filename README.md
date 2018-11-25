@@ -10,11 +10,13 @@ Qumu Project Assignemnt
  Additionally use trace for detailed logging of python interpreter.
       
       python -m trace --trace merge_dict.py
-      
+   
+   
    b. Merge two Dictioneries using recursion.
    
       python merge_dict_recurssion.py
-      
+   
+   
    c. Concurrent health checks.
    
       python concurrent_health_checks.py
@@ -22,4 +24,5 @@ Qumu Project Assignemnt
  Scripts are located under python3 module, sample outputs have been attached for reference.
  
  
- 2. 
+ 
+ 2. Cloud Engineer - Operations Assignment
