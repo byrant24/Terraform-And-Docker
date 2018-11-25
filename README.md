@@ -31,6 +31,8 @@ Qumu Project Assignemnt
    CloudFormation script "cloud_formation_script.json" can be found under "Sentry_Docker_Stack" module.
     
    **Summary** - The CloudFormation scripts provisions infastructure, deploy and runs sentry application.
+   
+   **AWS Architecture Diagram:** https://s3.ap-south-1.amazonaws.com/qumuhyd1/CloudFormation_Docker_Architecture.png
     
    **Description** - " The 'cloud_formation_script.json' to host sentry app. I am using my own hosted domain 'anmolposts.com' in Route53 to create a record set. The CloudFormation Template is AutoScalingMultiAZWithNotifications, creates a multi-az, load balanced and Auto Scaled sentry application running on ec2 instnace behind an application load balancer. The application is configured to span all Availability Zones in the region and is Auto-Scaled based on the CPU utilization of the web servers. Notifications will be sent to the operator email address on scaling events. The instances are load balanced with a simple health check against the default web page. Amazon Linux is chosen as the ami. Please proivde a public facing VPC and atleast two subnets(default) with internet access for application load balancer to function".
 
@@ -51,8 +53,6 @@ Qumu Project Assignemnt
       - t2.xlarge 4 CPUS, 16GB RAM   
    - Minimum
       - t2.medium 2 CPUS, 4GB RAM
-        
-   **AWS Architecture Diagram:** https://s3.ap-south-1.amazonaws.com/qumuhyd1/CloudFormation_Docker_Architecture.png
    
    **Sentry Home Page:** https://s3.ap-south-1.amazonaws.com/qumuhyd1/sentry_home_page.PNG
    
@@ -84,12 +84,16 @@ Qumu Project Assignemnt
    The architecture uses Load Balancer, Route53 to expose services. The ECS service is autoscaled by using AutoScaling for fault tolerancy. Creates VPC, public and private subnet, security groups, deploys postgres in RDS, deploys redis in elasticache. Creates Container template, task definitions, ECS service and cluster.   
    
    **Components:**
+   - `variables.tf` conatians all the variables required in the module.
    - `connections.tf` specifies the aws connection provider.
    - `network.tf` creates vpc, public and private subnet, internet gateway, route table and nat gateway.
    - `ecs.tf` creates ecs cluster, ecs tasks definitions, ecs service. Attaches ecs service to load balancer.
    - `alb.tf` creates load balance, its target groups and its listeners.
    - `auto_scaling.tf` creates auto scaling to attach to the ecs service, auto scaling policies based on cloud watch alarms.
-   - `security.tf` creates security group for load balancer and ecs tasks
+   - `security.tf` creates security group for load balancer and ecs tasks.
+   - `rds_postgres.tf` deploys postgres to RDS db with security group and subnets.
+   - `redis.tf` deploys redis cluster to elasticache.
+   - 'route53_mapping.tf' creates an alias for loadbalancer using hosted zone 'anmolposts.com'. 
    
         
             
