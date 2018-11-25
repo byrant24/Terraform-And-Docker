@@ -3,7 +3,7 @@ Qumu Project Assignemnt
 
 1. Cloud Engineer - Coding Assignment
 
-  a. Merge two Dictionaries.
+    a. Merge two Dictionaries.
     
       python merge_dict.py
       
