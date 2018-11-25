@@ -44,11 +44,13 @@ Qumu Project Assignemnt
              SSHLocation: Your Ip (Default: 0.0.0.0/0)
               
    **Note**: Sentry hardware requirements minimum 2 CPU, 4GB RAM.
-       On using t2.micro the instarnce freezes on running dokcer web upgrade because of resource constraints.
-        - Recomended Instance type:
-            t2.xlarge 4 CPUS, 16GB RAM
-        - Minimum -
-            t2.medium 2 CPUS, 4GB RAM
+
+   On using t2.micro the instarnce freezes on running dokcer web upgrade because of resource constraints.
+   
+   - Recomended Instance type:
+      - t2.xlarge 4 CPUS, 16GB RAM   
+   - Minimum
+      - t2.medium 2 CPUS, 4GB RAM
         
    AWS Architecture Diagram: https://s3.ap-south-1.amazonaws.com/qumuhyd1/CloudFormation_Docker_Architecture.png
    
