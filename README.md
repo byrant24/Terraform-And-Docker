@@ -5,20 +5,20 @@ Qumu Project Assignemnt
 
     - Merge two Dictionaries.
     
-        python merge_dict.py
+          python merge_dict.py
       
     Additionally use trace for detailed logging of python interpreter.
       
-        python -m trace --trace merge_dict.py
+          python -m trace --trace merge_dict.py
    
     - Merge two Dictioneries using recursion.
    
-        python merge_dict_recurssion.py
+          python merge_dict_recurssion.py
    
    
     - Concurrent health checks.
    
-        python concurrent_health_checks.py
+          python concurrent_health_checks.py
       
     Scripts are located under python3 module, sample outputs have been attached for reference.
  
