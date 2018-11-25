@@ -52,9 +52,9 @@ Qumu Project Assignemnt
    - Minimum
       - t2.medium 2 CPUS, 4GB RAM
         
-   AWS Architecture Diagram: https://s3.ap-south-1.amazonaws.com/qumuhyd1/CloudFormation_Docker_Architecture.png
+   **AWS Architecture Diagram:** https://s3.ap-south-1.amazonaws.com/qumuhyd1/CloudFormation_Docker_Architecture.png
    
-   Sentry Home Page: https://s3.ap-south-1.amazonaws.com/qumuhyd1/sentry_home_page.PNG
+   **Sentry Home Page:** https://s3.ap-south-1.amazonaws.com/qumuhyd1/sentry_home_page.PNG
    
    Creating user account is optional hence it is skipped in the script
        
@@ -63,7 +63,7 @@ Qumu Project Assignemnt
    Otherwise on user account creation, Sentry Welcome page - https://s3.ap-south-1.amazonaws.com/qumuhyd1/sentry_login_successful.PNG
 
        
-  b. Deploy using Terraform and Kubernetes
+### Deploy using Terraform and Kubernetes
   
   Find the terraform scripts in the terraform module.
     
@@ -80,8 +80,16 @@ Qumu Project Assignemnt
             terraform apply
         
         
-   Description: The terraform module will deploy Containers on Amazon’s ECS using Fargate.
+   **Description:** The terraform module creates ECS cluster and deploy Containers on Amazon’s ECS using *Fargate*. 
+   The architecture uses Load Balancer, Route53 to expose services. The ECS service is autoscaled by using AutoScaling for fault tolerancy. Creates VPC, public and private subnet, security groups, deploys postgres in RDS, deploys redis in elasticache. Creates Container template, task definitions, ECS service and cluster.   
    
+   **Components:**
+   - `connections.tf` specifies the aws connection provider.
+   - `network.tf` creates vpc, public and private subnet, internet gateway, route table and nat gateway.
+   - `ecs.tf` creates ecs cluster, ecs tasks definitions, ecs service. Attaches ecs service to load balancer.
+   - `alb.tf` creates load balance, its target groups and its listeners.
+   - `auto_scaling.tf` creates auto scaling to attach to the ecs service, auto scaling policies based on cloud watch alarms.
+   - `security.tf` creates security group for load balancer and ecs tasks
    
         
             
