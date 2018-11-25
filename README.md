@@ -61,7 +61,22 @@ Qumu Project Assignemnt
        
    Otherwise on user account creation, Sentry Welcome page - https://s3.ap-south-1.amazonaws.com/qumuhyd1/sentry_login_successful.PNG
 
-        
+       
+  b. Deploy using Terraform and Kubernetes
+  
+  Find the terraform scripts in the terraform module.
+    
+   To initialize a working directory containing Terraform configuration files.
+     
+            terraform init
+   
+   To let terraform to create an execution plan.  
+            
+            terraform plan
+            
+   To apply the changes required to reach the desired state of the configuration
+   
+            terraform apply
         
         
             
