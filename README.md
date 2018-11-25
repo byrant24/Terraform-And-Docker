@@ -93,7 +93,7 @@ Qumu Project Assignemnt
    - `security.tf` creates security group for load balancer and ecs tasks.
    - `rds_postgres.tf` deploys postgres to RDS db with security group and subnets.
    - `redis.tf` deploys redis cluster to elasticache.
-   - 'route53_mapping.tf' creates an alias for loadbalancer using hosted zone 'anmolposts.com'. 
+   - `route53_mapping.tf` creates an alias for loadbalancer using hosted zone 'anmolposts.com'. 
    
         
             
