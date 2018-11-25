@@ -52,6 +52,7 @@ Qumu Project Assignemnt
         -  t2.medium 2 CPUS, 4GB RAM
         
    AWS Architecture Diagram: https://s3.ap-south-1.amazonaws.com/qumuhyd1/CloudFormation_Docker_Architecture.png
+   
    Sentry Home Page: https://s3.ap-south-1.amazonaws.com/qumuhyd1/sentry_home_page.PNG
    
    Creating user account is optional hence it is skipped in the script
