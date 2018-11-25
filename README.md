@@ -41,12 +41,12 @@ Qumu Project Assignemnt
 
    **Parameters**:
    
-             VPCId: Internet facing VPC
-             Subnets: Two subnets
-             InstanceType: Default (t2.large)
-             OperatorEMail: Default (itsrai.anmol@gmail.com)
-             KeyName: Your Regional key pair
-             SSHLocation: Your Ip (Default: 0.0.0.0/0)
+   - `VPCId`: Internet facing VPC
+   - `Subnets`: Two subnets
+   - `InstanceType`: Default (t2.large)
+   - `OperatorEmail`: Default (itsrai.anmol@gmail.com)
+   - `KeyName`: Your Regional key pair
+   - `SSHLocation`: Your Ip (Default: 0.0.0.0/0)
               
    **Note**: Sentry hardware requirements minimum 2 CPU, 4GB RAM.
 
