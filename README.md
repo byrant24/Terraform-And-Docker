@@ -28,6 +28,19 @@ Qumu Project Assignemnt
 
     a. Deploy using Dokcer
     
-    CloudFormation script "cloud_formation_script.json" can be found under "Sentry_Docker_Stack" module
+    CloudFormation script "cloud_formation_script.json" can be found under "Sentry_Docker_Stack" module.
+    
+    Summary - The CloudFormation scripts provisions infastructure, deploy and runs sentry application.
+    
+    Description - " The 'cloud_formation_script.json' to host sentry app. The CloudFormation Template uses AutoScalingMultiAZWithNotifications: Create a multi-az, load balanced and Auto Scaled sentry application running on ec2 instnace behind an application load balancer. The application is configured to span all Availability Zones in the region and is Auto-Scaled based on the CPU utilization of the web servers. Notifications will be sent to the operator email address on scaling events. The instances are load balanced with a simple health check against the default web page. Amazon Linux is chosen as the ami. Please proivde a public facing VPC and atleast two subnets(default) with internet access for application load balancer to function".
+
+   
+             VPCId: Internet facing VPC
+             Subnets: Two subnets
+             InstanceType: Default (t2.large)
+             OperatorEMail: Default (itsrai.anmol@gmail.com)
+             KeyName: Your Regional key pair
+             SSHLocation: Your Ip (Default: 0.0.0.0/0)
+              
     
             
