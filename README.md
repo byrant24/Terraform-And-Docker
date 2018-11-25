@@ -95,6 +95,11 @@ Qumu Project Assignemnt
    - `redis.tf` deploys redis cluster to elasticache.
    - `route53_mapping.tf` creates an alias for loadbalancer using hosted zone 'anmolposts.com'. 
    
+Fargate Resource Settings:
+- fargate_cpu: 1024 cpu units
+- fargate_memory: 2048 MiB
+
+Modifications under `variables.tf`.
         
 Deploying to aws fargate using kubernetes with **virtual-kubelet**.
 
