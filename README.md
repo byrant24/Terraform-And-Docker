@@ -7,7 +7,7 @@ Qumu Project Assignemnt
     
           python merge_dict.py
       
-    Additionally use trace for detailed logging of python interpreter.
+      Additionally use trace for detailed logging of python interpreter.
       
           python -m trace --trace merge_dict.py
    
