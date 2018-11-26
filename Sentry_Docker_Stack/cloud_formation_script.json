@@ -94,6 +94,10 @@
             "Default": "0.0.0.0/0",
             "AllowedPattern": "(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})/(\\d{1,2})",
             "ConstraintDescription": "must be a valid IP CIDR range of the form x.x.x.x/x."
+        },
+	"DNSPrefix": {
+            "Description": "DNS Prefix to be attached to the hosted zone 'anmolposts.com'",
+             "Type": "String"
         }
     },
     "Mappings": {
@@ -781,7 +785,7 @@
                                 "echo $comment > .env\n",
                                 "sed -i \"1i SENTRY_SECRET_KEY=${KEY}\" .env\n",
 								
-								"yes n | sudo docker-compose run --rm web upgrade",
+				"yes n | sudo docker-compose run --rm web upgrade",
                                 "\n",
                                 "sudo docker-compose up -d",
                                 "\n",
